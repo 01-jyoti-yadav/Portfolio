@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#020617;
+position:sticky;
+top:0;
+}
+
+header h1{
+color:#38bdf8;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+section{
+padding:80px 10%;
+}
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.hero-text h2{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.hero-text span{
+color:#38bdf8;
+}
+
+.hero-text p{
+margin:15px 0;
+color:#cbd5f5;
+}
+
+.btn{
+display:inline-block;
+padding:10px 25px;
+background:#38bdf8;
+border-radius:25px;
+color:black;
+text-decoration:none;
+font-weight:bold;
+margin-top:10px;
+}
+
+.hero img{
+width:250px;
+border-radius:50%;
+border:4px solid #38bdf8;
+}
+
+.title{
+text-align:center;
+margin-bottom:40px;
+font-size:32px;
+color:#38bdf8;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#1e293b;
+padding:15px;
+border-radius:10px;
+}
+
+.skill-bar{
+height:8px;
+background:#334155;
+border-radius:10px;
+margin-top:8px;
+}
+
+.skill-fill{
+height:8px;
+background:#38bdf8;
+width:0;
+border-radius:10px;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:#1e293b;
+padding:20px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.project-card h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact input,.contact textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:6px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero img{
+margin-top:20px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Portfolio</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+<h2>Hello, I'm <span>Jyoti</span></h2>
+<p>I am a passionate Web Developer who loves creating modern websites and applications.</p>
+<a href="#contact" class="btn">Hire Me</a>
+</div>
+
+<img src="C:\Users\JYOTI YADAV\Downloads\Jyoti.jpeg" alt="profile">
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<p>
+I am a web developer skilled in HTML, CSS, JavaScript and backend technologies.
+I enjoy building responsive and user-friendly websites. My goal is to create
+beautiful and functional digital experiences.
+</p>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">My Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+HTML
+<div class="skill-bar">
+<div class="skill-fill" data-width="90%"></div>
+</div>
+</div>
+
+<div class="skill">
+CSS
+<div class="skill-bar">
+<div class="skill-fill" data-width="85%"></div>
+</div>
+</div>
+
+<div class="skill">
+JavaScript
+<div class="skill-bar">
+<div class="skill-fill" data-width="75%"></div>
+</div>
+</div>
+
+<div class="skill">
+Java
+<div class="skill-bar">
+<div class="skill-fill" data-width="70%"></div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>A personal portfolio website built using HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="project-card">
+<h3>Calculator</h3>
+<p>A simple calculator built using JavaScript.</p>
+</div>
+
+<div class="project-card">
+<h3>Student Database</h3>
+<p>A CRUD application using Java and MySQL.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="contact">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+<br>
+<button class="btn">Send Message</button>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Jyoti Portfolio | All Rights Reserved</p>
+</footer>
+
+<script>
+
+const skills=document.querySelectorAll(".skill-fill");
+
+window.addEventListener("scroll",()=>{
+
+skills.forEach(skill=>{
+
+let position=skill.getBoundingClientRect().top;
+let screen=window.innerHeight;
+
+if(position < screen){
+skill.style.width=skill.dataset.width;
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
